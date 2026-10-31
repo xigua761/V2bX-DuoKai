@@ -11,3 +11,8 @@ API_HOST=https://面板域名 API_KEY=通讯密钥 NODE_ID=12 NODE_TYPE=vless CO
 # 升级 / 卸载
 v2bx-relay update
 v2bx-relay uninstall
+
+
+补全文件
+cp -n /etc/V2bX/sing_origin.json /etc/V2bX/dns.json /etc/v2bx-2/ 2>/dev/null
+sed -i 's|/etc/V2bX|/etc/v2bx-2|g' /etc/v2bx-2/*.json
